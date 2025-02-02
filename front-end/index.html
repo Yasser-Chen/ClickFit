@@ -6,8 +6,672 @@
     <title>Click Fit</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
   </head>
+
   <body>
+    <nav
+      class="navbar navbar-expand-md bg-dark sticky-top border-bottom"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="javascript:void">
+          <img
+            src="assets/Logo.png"
+            alt="Click Fit Logo"
+            width="40"
+            height="40"
+          />
+          Click Fit
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvas"
+          aria-controls="offcanvas"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvas"
+          aria-labelledby="offcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Click Fit</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav flex-grow-1 justify-content-center gap-4">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#classes">Classes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#trainers">Trainers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#membership">Membership</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#schedule">Schedule</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="javascript:void" id="registerLink"
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <div class="position-relative hero-section">
+        <div
+          id="heroCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/wp8834081.webp"
+                class="d-block w-100 hero-img"
+                alt="Fitness"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/StockCake-Fitness Class Reflections_1738509198.jpg"
+                class="d-block w-100 hero-img"
+                alt="Workout"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/gym-equipment.jpeg"
+                class="d-block w-100 hero-img"
+                alt="Gym"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div
+          class="hero-content position-absolute start-50 translate-middle-x text-white text-center"
+        >
+          <div class="col-md-8 mx-auto my-5">
+            <h1 class="display-3 fw-bold">
+              Transform Your Body, Transform Your Life
+            </h1>
+            <h3 class="fw-normal mb-3">
+              Join Click Fit Today and Start Your Fitness Journey
+            </h3>
+            <div class="d-flex gap-3 justify-content-center lead fw-normal">
+              <a class="btn btn-primary btn-lg px-4" href="#membership"
+                >Join Now</a
+              >
+              <a class="btn btn-outline-light btn-lg px-4" href="#classes"
+                >View Classes</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="container px-4 py-5 features-section">
+        <p class="text-center text-muted mb-4">
+          <img
+            style="height: 30px"
+            src="assets/png-clipart-logo-information-library-business-information-miscellaneous-blue-thumbnail-removebg-preview.png"
+          />
+          Drag and arrange these features based on what interests you most!
+        </p>
+        <div
+          class="row g-4 py-5 row-cols-1 row-cols-lg-3"
+          id="sortableFeatures"
+        >
+          <div class="col d-flex align-items-start draggable-feature">
+            <div
+              class="text-center w-100 feature-card"
+              data-feature="equipment"
+            >
+              <img
+                src="assets/moderne-dumbbell.jpg"
+                alt="Equipment"
+                class="mb-3"
+                style="height: 150px"
+              />
+              <h3 class="fs-2">Modern Equipment</h3>
+              <p>
+                State-of-the-art fitness equipment for optimal workout
+                experience.
+              </p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start draggable-feature">
+            <div class="text-center w-100 feature-card" data-feature="trainers">
+              <img
+                src="assets/expert-trainers.jpg"
+                alt="Trainers"
+                class="mb-3"
+                style="height: 150px"
+              />
+              <h3 class="fs-2">Expert Trainers</h3>
+              <p>
+                Professional certified trainers to guide your fitness journey.
+              </p>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start draggable-feature">
+            <div class="text-center w-100 feature-card" data-feature="classes">
+              <img
+                src="assets/workout_gym.jpg"
+                alt="Classes"
+                class="mb-3"
+                style="height: 150px"
+              />
+              <h3 class="fs-2">Diverse Classes</h3>
+              <p>Wide range of fitness classes for all experience levels.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote Section -->
+      <div class="container-fluid py-5 quote-section bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+              <blockquote class="blockquote">
+                <p class="mb-3" id="factText">
+                  Loading an inspiring historical fact...
+                </p>
+                <footer class="blockquote-footer">
+                  Historical fact from year
+                  <cite id="factYear">loading...</cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Membership Plans -->
+      <div class="container px-4 py-5" id="membership">
+        <h2 class="text-center mb-5">Membership Plans</h2>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm h-100">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Basic</h4>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h1 class="card-title">
+                  $29<small class="text-muted fw-light">/mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Access to Gym Floor</li>
+                  <li>Basic Equipment Usage</li>
+                  <li>Locker Room Access</li>
+                  <li>2 Classes per Month</li>
+                </ul>
+                <button
+                  type="button"
+                  class="w-100 btn btn-lg btn-outline-primary mt-auto"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary h-100">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Premium</h4>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h1 class="card-title">
+                  $59<small class="text-muted fw-light">/mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>All Basic Features</li>
+                  <li>Unlimited Classes</li>
+                  <li>Personal Trainer (2x/month)</li>
+                  <li>Nutrition Consultation</li>
+                  <li>Access to Spa Area</li>
+                </ul>
+                <button
+                  type="button"
+                  class="w-100 btn btn-lg btn-primary mt-auto"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm h-100">
+              <div class="card-header py-3 text-bg-dark">
+                <h4 class="my-0 fw-normal">Elite</h4>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h1 class="card-title">
+                  $99<small class="text-muted fw-light">/mo</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>All Premium Features</li>
+                  <li>Personal Trainer (4x/month)</li>
+                  <li>Private Locker</li>
+                  <li>Guest Passes (2/month)</li>
+                  <li>24/7 Gym Access</li>
+                  <li>Priority Class Booking</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-dark mt-auto">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Classes Preview -->
+      <div class="bg-dark text-white py-5" id="classes">
+        <div class="container">
+          <h2 class="text-center mb-5">Our Classes</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card bg-dark text-white border-light">
+                <img
+                  src="assets/DALL·E 2025-02-02 15.57.22 - A dynamic and energetic digital illustration of a cardio workout scene. The image features a diverse group of people performing various cardio exercis.webp"
+                  class="card-img-top"
+                  alt="Cardio Blast"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Cardio Blast</h5>
+                  <p class="card-text">
+                    High-energy cardio workout to boost stamina and burn
+                    calories.
+                  </p>
+                  <p class="text-muted">Mon, Wed, Fri | 8:00 AM</p>
+                  <a href="#" class="btn btn-outline-light">Book Class</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card bg-dark text-white border-light">
+                <img
+                  src="assets/DALL·E 2025-02-02 15.58.18 - A powerful and intense digital illustration of a strength training workout scene. The image features a diverse group of people lifting weights, perfor.webp"
+                  class="card-img-top"
+                  alt="Strength Training"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Power Strength</h5>
+                  <p class="card-text">
+                    Build muscle and strength with expert guidance and
+                    techniques.
+                  </p>
+                  <p class="text-muted">Tue, Thu | 9:30 AM</p>
+                  <a href="#" class="btn btn-outline-light">Book Class</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card bg-dark text-white border-light">
+                <img
+                  src="assets/DALL·E 2025-02-02 16.00.44 - A group of people practicing yoga together in a modern gym. The gym is spacious with wooden flooring, large windows letting in natural light, and gree.webp"
+                  class="card-img-top"
+                  alt="Yoga"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Zen Yoga</h5>
+                  <p class="card-text">
+                    Find balance and flexibility through mindful yoga practice.
+                  </p>
+                  <p class="text-muted">Daily | 7:00 AM</p>
+                  <a href="#" class="btn btn-outline-light">Book Class</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card bg-dark text-white border-light">
+                <img
+                  src="assets/DALL·E 2025-02-02 16.01.48 - A high-intensity interval training (HIIT) boxing class in a modern gym. Participants are engaged in intense boxing drills, wearing athletic gear and g.webp"
+                  class="card-img-top"
+                  alt="HIIT"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">HIIT Express</h5>
+                  <p class="card-text">
+                    Quick, intense workout sessions for maximum fitness results.
+                  </p>
+                  <p class="text-muted">Mon, Wed, Fri | 12:00 PM</p>
+                  <a href="#" class="btn btn-outline-light">Book Class</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card bg-dark text-white border-light">
+                <img
+                  src="assets/DALL·E 2025-02-02 16.03.59 - A group of people participating in a high-energy gym class together. They are engaged in a fitness workout, including boxing exercises, cardio, and st.webp"
+                  class="card-img-top"
+                  alt="Boxing"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Box Fit</h5>
+                  <p class="card-text">
+                    High-energy boxing workouts for fitness and self-defense.
+                  </p>
+                  <p class="text-muted">Tue, Thu | 6:00 PM</p>
+                  <a href="#" class="btn btn-outline-light">Book Class</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card bg-dark text-white border-light">
+                <img
+                  src="assets/DALL·E 2025-02-02 16.04.40 - A group of people participating in a high-energy indoor spinning class. They are riding stationary bikes in a modern gym with dim lighting and colorfu.webp"
+                  class="card-img-top"
+                  alt="Spinning"
+                  style="height: 200px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Spin Studio</h5>
+                  <p class="card-text">
+                    Dynamic indoor cycling sessions with motivating music.
+                  </p>
+                  <p class="text-muted">Daily | 5:30 PM</p>
+                  <a href="#" class="btn btn-outline-light">Book Class</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img
+              src="assets/Logo.png"
+              width="24"
+              height="24"
+              class="d-block mb-2"
+            />
+            <small class="d-block mb-3 text-white"
+              >&copy; 2025 Click Fit. All rights reserved.</small
+            >
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Cool stuff</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Random feature</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Team feature</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Stuff for developers</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Another one</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Last time</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Resource name</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Resource</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Another resource</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Final resource</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Business</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Government</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Gaming</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Team</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Locations</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Privacy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-secondary text-decoration-none"
+                  href="javascript:void"
+                  >Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="registerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <form id="registerForm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">Register</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="registerEmail"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="registerPassword" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="registerPassword"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="registerConfirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="registerConfirmPassword"
+                  required
+                />
+                <small id="passwordError" class="text-danger"></small>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Profile Image</label>
+                <div class="image-upload-zone" id="dropZone">
+                  <p class="upload-prompt">
+                    Drag and drop an image here or click to select
+                  </p>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="profile_image"
+                    name="profile_image"
+                    accept="image/*"
+                  />
+                </div>
+                <div id="imagePreview" class="mt-2 text-center"></div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Create Account
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
